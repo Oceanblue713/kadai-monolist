@@ -11,11 +11,12 @@
               <% if item.persisted? %>
                 <p class="item-title"><%= link_to item.name, item %></p>
               <% else %>
-                <p class="item_title"><%= item.name %></p>
+                <p class="item_title"><%= cut_off(item.name, 30) %></p>
               <% end %>
               <div class="buttons text-center">
                 <% if logged_in? %>
                   <%= render 'ownerships/want_button', item: item %>
+                  <%= render 'ownerships/have_button', item: item %>
                 <% end %>
               </div>
             </div>

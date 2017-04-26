@@ -13,13 +13,13 @@
           <%= @count_want %>
         </div>
       </li>
+      <li>
+        <div class="status-label">HAVE</div>
+        <div id="have_count" class="stasu-value">
+          <%= @count_have %>
+        </div>
+      </li>
     </ul>
-    <li>
-      <div class="status-label">HAVE</div>
-      <div id="have_count" class="stasu-value">
-        xxx
-      </div>
-    </li>
   </div>
 </div>
 <%= render 'items/items', items: @items %>
